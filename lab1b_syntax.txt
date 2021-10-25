@@ -1,0 +1,36 @@
+The words - predefined tokens are specified between " and ":
+Sintactical rules: (file Syntax.in)
+program := decllist ";" “program{ ”cmpdstmt “}”
+decllist ::= declaration | declaration ";" decllist
+declaration := decl_keyword IDENTIFIER | declaration “=” 
+decl_keyword := “const” | “let” 
+maintype := "BOOLEAN" | "CHAR" | "STRING" | "INTEGER" | "FLOAT" 
+arraydecl := "[" maintype "]" “<” int “>” | array_val
+array_val :=  “[” term [{, term}] “]” ! how do I make sure the terms are of the same type?
+type := maintype  |arraydecl
+cmpdstmt := stmtlist
+stmtlist := stmt ";" {stmtlist}
+stmt := simplstmt | structstmt
+simplstmt := assignstmt | iostmt
+assignstmt := IDENTIFIER "=" expression | IDENTIFIER arith_assign_sign arith_expression | IDENTIFIER “+=” str_expression | IDENTIFIER bool_assign_sign bool_expression
+arith_assign_sign := “+=” | “-=” | “*=” | “/=” | “%=”
+bool_assign_sign := “|=” | “&=”
+expression := arith_expression | str_expression | bool_expression
+term := arith_term | bool_term | str_term
+arith_expression := arith_term | [arith_op arith_expression]
+arith_term := int | float
+arith_op :=  “*” | “+” | “-” | “/” | “%”
+str_expression = string [ str_op str_term ]
+str_term := string
+str_op ;= “+”
+bool_expression := bool_term [ bool_op bool_expression]
+bool_term := bool
+bool_op = “&”  | “|”
+factor ::= "(" expression ")" | IDENTIFIER
+iostmt ::= ("read" | "print") "(" IDENTIFIER ")"
+structstmt ::= cmpdstmt | ifstmt | whilestmt
+ifstmt ::= "if" condition "then {" stmt ["else" stmt] “}”
+whilestmt := "while" condition "{" stmt “}”
+condition := expression RELATION expression
+RELATION := "<" | "<=" | "=" | "<>" | ">=" | ">" | “”
+
