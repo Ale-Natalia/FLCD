@@ -1,0 +1,6 @@
+let a = "Buna ziua;
+let b = 10;
+let c = 7;
+print(5a);
+let sum = b + c;
+print(sum);

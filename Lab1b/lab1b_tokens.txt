@@ -6,7 +6,7 @@ Lexic:
 1.	Special symbols, representing:
 a.	operators + - * / % == != = += -= *= /= %= < > <= >= & | &= |=
 b.	separators ( ) [ ] { }  : ; space endline
-c.	reserved words: let const if else then while read print len
+c.	reserved words: let const if else then while for read print len
 2.	Identifiers
 a sequence of letters, digits and underscore, such that the first character is not a digit; the rule is:
 identifier = allowed_first | allowed_first{ allowed_character }

@@ -1,0 +1,19 @@
+let given_strings = ["ana", "are", "mere"];
+let separator = "!";
+let concat_result = "";
+let index;
+if (len(given_strings) == 0) then {
+	concat_result = "";
+}
+else if (len(given_strings) == 1) then {
+	concat_result = given_strings[0];
+}
+else { 
+for (0 = index = len(given_strings) - 2) {
+	given_string = given_strings[index];
+		concat_result += given_string + separator;
+}
+given_string = given_strings[len(given_strings) - 1];
+concat_result += given_string;
+}
+print(concat_result);
