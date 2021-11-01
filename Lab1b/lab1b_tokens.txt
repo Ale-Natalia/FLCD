@@ -1,34 +1,41 @@
-Alphabet:
-a.	Upper (A-Z) and lower case letters (a-z) of the English alphabet
-b.	Decimal digits (0-9);
-c.	Underscore: '_'
-Lexic:
-1.	Special symbols, representing:
-a.	operators + - * / % == != = += -= *= /= %= < > <= >= & | &= |=
-b.	separators ( ) [ ] { }  : ; space endline
-c.	reserved words: let const if else then while read print len
-2.	Identifiers
-a sequence of letters, digits and underscore, such that the first character is not a digit; the rule is:
-identifier = allowed_first | allowed_first{ allowed_character }
-allowed_first = letter | “_”
-allowed_character = letter | digit | “_” 
-letter = "A" | "B" | ...| "Z" | “a” | “b” | … | “z”
-digit = "0" | "1" |...| "9"
-3.	Constants
-a.	Integer:
-integer = “0” | [sign] non_zero_digit {digit}
-non_zero_digit = “1” | “2” | … | “9”
-digit = “0”|“1”|…|”9”
-sign = “-”|”+”
-b.	Float:
-float = integer “.” {digit}
-c.	Boolean:
-boolean = true | false
-true = “1” | “true”
-false = “0” | “false”
-d.	Character
-character = 'letter' | 'digit' | ‘_’
-e.	String
-constchar:="string"
-string:=char|char{string}
-char:=allowed_character
++
+-
+*
+/
+%
+==
+!=
+=
++=
+-=
+*=
+/=
+%=
+|=
+>
+>
+<=
+>=
+&
+|
+(
+)
+[
+]
+{
+}
+,
+;
+space
+endline
+let
+const 
+if 
+else 
+then 
+while 
+read 
+print 
+len
+sin
+cos
