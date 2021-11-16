@@ -2,6 +2,7 @@ import string
 import re
 from SymbolTable import SymbolTable
 from ProgramInternalForm import ProgramInternalForm
+from FA import FA
 
 
 class Scanner(object):
@@ -13,6 +14,8 @@ class Scanner(object):
         self.__constantsST = SymbolTable(10)
         self.__identifiersST = SymbolTable(10)
         self.__pif = ProgramInternalForm()
+        self.__integerFA = FA("FA_integer.in")
+        self.__identifierFA = FA("FA_identifier.in")
 
         self.__previousToken = None
 
@@ -131,6 +134,7 @@ class Scanner(object):
             self.analyzeToken(token)
 
     def isInteger(self, token):
+        return self.__integerFA.acceptSequence(token)
         return re.match(r'^[+-]?[1-9][0-9]*$|0', token)
 
     def isFloat(self, token):
@@ -150,6 +154,7 @@ class Scanner(object):
         return self.isInteger(token) or self.isBoolean(token) or self.isFloat(token) or self.isString(token)
 
     def isIdentifier(self, token):
+        return self.__identifierFA.acceptSequence(token)
         return re.match('^([a-zA-Z_])+([a-zA-Z_0-9])*$', token)
 
     def addConstant(self, token):
