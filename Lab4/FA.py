@@ -60,6 +60,7 @@ class FA(object):
 
     def acceptSequence(self, sequence):
         currentState = self.__q0
+        index = 0
         for char in sequence:
             if char not in self.__S:
                 return False
@@ -68,9 +69,10 @@ class FA(object):
                 targetState = self.__delta[currentState][positionOfChar][0]
             except IndexError:  # it means this character cannot be reached from the current state
                 return False
-            if targetState in self.__F:
+            if targetState in self.__F and index == len(sequence) - 1:
                 return True
             currentState = targetState
+            index += 1
         return False
 
     def printTransitions(self):
@@ -100,10 +102,10 @@ class FA(object):
             else:
                 break
 
-
+"""
 fa = FA("FA.in")
 fa.menuFA()
 print(fa.acceptSequence("100"))
 print(fa.acceptSequence("1001"))
 #fa.readFA()
-
+"""

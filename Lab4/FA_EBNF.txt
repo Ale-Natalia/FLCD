@@ -1,4 +1,12 @@
 digit = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
 non_zero_digit = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+letter = {a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z}
+character = digit | letter | "_"
 natural_number = "0" | non_zero_digit {digit}
-Q = "Q=[q"natural_number{",q"natural_number}"]"
+state = "q" natural_number
+Q = "Q=[" state {"," state} "]"
+S = "S=[" character {"," character} "]"
+F = "F=[" state {"," state} "]"
+transition = state ":" "[" state "]" {";[" state "]"}
+
+file_format = Q "\n" S "\n" F "\n delta \n" transition {transition}
