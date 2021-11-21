@@ -20,6 +20,7 @@ print(scanner.ConstantsSymbolTable)
 print(scanner.IdentifiersSymbolTable)
 print(scanner.ProgramInternalForm)
 
+"""
 scanner = Scanner("lab1b_tokens.txt", "p1.txt")
 scanner.scanProgram()
 print(scanner.ConstantsSymbolTable)
@@ -37,3 +38,4 @@ scanner.scanProgram()
 print(scanner.ConstantsSymbolTable)
 print(scanner.IdentifiersSymbolTable)
 print(scanner.ProgramInternalForm)
+"""

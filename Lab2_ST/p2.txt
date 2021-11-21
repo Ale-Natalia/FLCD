@@ -1,5 +1,5 @@
-let r = 5;
-let n = 7;
+let r = 15;
+let _n123 = 7;
 const pi = 3.14;
 let area = 0.5 * n * r * r * sin(2 * pi / n);
 print(area);
