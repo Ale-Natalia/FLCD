@@ -75,11 +75,3 @@ class Grammar(object):
 
 grammar = Grammar("g1.txt")
 grammar.menu()
-
-"""
-fa = FA("FA.in")
-fa.menuFA()
-print(fa.acceptSequence("100"))
-print(fa.acceptSequence("1001"))
-#fa.readFA()
-"""
