@@ -1,0 +1,53 @@
+program := decllist ";" "program" "{" cmpdstmt "}"
+decllist := declaration | declaration ";" decllist
+declaration := decl_keyword IDENTIFIER | declaration "="
+decl_keyword := "const" | "let"
+allowed_character_repetition := allowed_character | allowed_character allowed_character_repetition
+IDENTIFIER := allowed_first | allowed_first allowed_character_repetition
+allowed_first := letter | "_"
+allowed_character := letter | digit | "_"
+letter := "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z"
+digit := "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+non_zero_digit := "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+digit_repetition := digit | digit digit_repetition
+unsigned_integer := non_zero_digit | non_zero_digit digit_repetition
+int := "0" | unsigned_integer | sign unsigned_integer
+sign := "-" | "+"
+float := int "." digit_repetition
+maintype := "BOOLEAN" | "CHAR" | "STRING" | "INTEGER" | "FLOAT"
+arraydecl := "[" maintype "]" "<" int ">" | array_val
+array_list := term | array_list "," term
+array_val := "[" array_list "]"
+type := maintype | arraydecl
+cmpdstmt := stmtlist
+stmtlist := stmt ";" | stmtlist ";" stmt
+stmt := simplstmt | structstmt
+simplstmt := assignstmt | iostmt
+assignstmt := IDENTIFIER "=" expression | IDENTIFIER arith_assign_sign arith_expression | IDENTIFIER "+=" str_expression | IDENTIFIER bool_assign_sign bool_expression
+arith_assign_sign := "+=" | "-=" | "*=" | "/=" | "%="
+bool_assign_sign := "|=" | "&="
+expression := arith_expression | str_expression | bool_expression
+term := arith_term | bool_term | str_term
+arith_expression := arith_term | arith_op arith_expression
+arith_term := int | float
+arith_op := "*" | "+" | "-" | "/" | "%"
+constchar := """ string """
+string := allowed_character_repetition
+char := allowed_character
+str_expression := string | string str_op str_term
+str_term := string
+str_op := "+"
+bool := true | false
+true := "1" | "true"
+false := "0" | "false"
+bool_expression := bool_term | bool_term bool_op bool_expression
+bool_term := bool
+bool_op := "&" | "|"
+factor := "(" expression ")" | IDENTIFIER
+iostmt := "read" "(" IDENTIFIER ")" | "print" "(" IDENTIFIER ")"
+structstmt := cmpdstmt | ifstmt | whilestmt
+thenstmt := stmt | stmt "else" stmt
+ifstmt := "if" condition "then" "{" thenstmt "}"
+whilestmt := "while" condition "{" stmt "}"
+condition := expression RELATION expression
+RELATION := "<" | "<=" | "=" | "<>" | ">=" | ">" | ""
