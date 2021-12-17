@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="673aaf4b-ac87-43f4-ae76-59f7ed3c65bc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/FA.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FA.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FA_identifier.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FA_integer.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab4/FA.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab4/FA.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab4/FA_EBNF.txt" afterDir="false" />
+    <list default="true" id="673aaf4b-ac87-43f4-ae76-59f7ed3c65bc" name="Default Changelist" comment="integrated FA in Scanner">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scanner.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scanner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/p2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/p2.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +163,9 @@
       <workItem from="1636134489760" duration="533000" />
       <workItem from="1636216278109" duration="619000" />
       <workItem from="1636366266442" duration="1173000" />
-      <workItem from="1637102153422" duration="1692000" />
+      <workItem from="1637102153422" duration="1781000" />
+      <workItem from="1637136815139" duration="1007000" />
+      <workItem from="1637529661876" duration="5669000" />
     </task>
     <task id="LOCAL-00001" summary="finished lexical scanner">
       <created>1635785568160</created>
@@ -182,7 +174,21 @@
       <option name="project" value="LOCAL" />
       <updated>1635785568160</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="integrated FA in Scanner">
+      <created>1637103894797</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1637103894797</updated>
+    </task>
+    <task id="LOCAL-00003" summary="integrated FA in Scanner">
+      <created>1637534364051</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1637534364051</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,57 +196,62 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="finished lexical scanner" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished lexical scanner" />
+    <MESSAGE value="integrated FA in Scanner" />
+    <option name="LAST_COMMIT_MESSAGE" value="integrated FA in Scanner" />
   </component>
   <component name="WindowStateProjectService">
     <state x="542" y="216" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1635780226220">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="542" y="216" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1635780226220" />
-    <state x="393" y="8" key="CommitChangelistDialog2" timestamp="1635785567424">
+    <state x="393" y="8" key="CommitChangelistDialog2" timestamp="1637534363271">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1635785567424" />
+    <state x="393" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1637534363271" />
     <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1636390665934">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1636390665934" />
-    <state width="1493" height="200" key="GridCell.Tab.0.bottom" timestamp="1637103813219">
+    <state width="1493" height="200" key="GridCell.Tab.0.bottom" timestamp="1637538593874">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="200" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1637103813219" />
-    <state width="1493" height="200" key="GridCell.Tab.0.center" timestamp="1637103813219">
+    <state width="1493" height="200" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1637538593874" />
+    <state width="1493" height="200" key="GridCell.Tab.0.center" timestamp="1637538593874">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="200" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1637103813219" />
-    <state width="1493" height="200" key="GridCell.Tab.0.left" timestamp="1637103813219">
+    <state width="1493" height="200" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1637538593874" />
+    <state width="1493" height="200" key="GridCell.Tab.0.left" timestamp="1637538593874">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="200" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1637103813219" />
-    <state width="1493" height="200" key="GridCell.Tab.0.right" timestamp="1637103813219">
+    <state width="1493" height="200" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1637538593874" />
+    <state width="1493" height="200" key="GridCell.Tab.0.right" timestamp="1637538593874">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="200" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1637103813219" />
-    <state width="1493" height="260" key="GridCell.Tab.1.bottom" timestamp="1637103797476">
+    <state width="1493" height="200" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1637538593874" />
+    <state width="1493" height="260" key="GridCell.Tab.1.bottom" timestamp="1637538593870">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="260" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1637103797476" />
-    <state width="1493" height="260" key="GridCell.Tab.1.center" timestamp="1637103797476">
+    <state width="1493" height="260" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1637538593870" />
+    <state width="1493" height="260" key="GridCell.Tab.1.center" timestamp="1637538593870">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="260" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1637103797476" />
-    <state width="1493" height="260" key="GridCell.Tab.1.left" timestamp="1637103797476">
+    <state width="1493" height="260" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1637538593870" />
+    <state width="1493" height="260" key="GridCell.Tab.1.left" timestamp="1637538593870">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="260" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1637103797476" />
-    <state width="1493" height="260" key="GridCell.Tab.1.right" timestamp="1637103797476">
+    <state width="1493" height="260" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1637538593870" />
+    <state width="1493" height="260" key="GridCell.Tab.1.right" timestamp="1637538593870">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="260" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1637103797476" />
-    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1636216279760">
+    <state width="1493" height="260" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1637538593870" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1637534388125">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1636216279760" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1637534388125" />
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1637529662289">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1637529662289" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -252,8 +263,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Scanner.py</url>
-          <line>156</line>
-          <option name="timeStamp" value="2" />
+          <line>136</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -261,7 +272,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Lab2_ST$regex_test.coverage" NAME="regex_test Coverage Results" MODIFIED="1635776180598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Lab2_ST$ProgramInternalForm.coverage" NAME="ProgramInternalForm Coverage Results" MODIFIED="1635678038686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Lab2_ST$main.coverage" NAME="main Coverage Results" MODIFIED="1637103813212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Lab2_ST$main.coverage" NAME="main Coverage Results" MODIFIED="1637533560239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Lab2_ST$Scanner.coverage" NAME="Scanner Coverage Results" MODIFIED="1635776190546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

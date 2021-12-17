@@ -1,4 +1,4 @@
-program := decllist ";" "program" "{" cmpdstmt "}"
+program := decllist ";" "prog" "{" cmpdstmt "}"
 decllist := declaration | declaration ";" decllist
 declaration := decl_keyword IDENTIFIER | declaration "="
 decl_keyword := "const" | "let"
