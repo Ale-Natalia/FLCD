@@ -1,0 +1,40 @@
+A keyword: let
+An identifier: r
+An operator: =
+An integer: 15 (15)
+A separator: ;
+A keyword: let
+An identifier: _n123
+An operator: =
+An integer: 7 (7)
+A separator: ;
+A keyword: const
+An identifier: pi
+An operator: =
+A float: 3.14 (3.14)
+A separator: ;
+A keyword: let
+An identifier: area
+An operator: =
+A float: 0.5 (0.5)
+An operator: *
+An identifier: n
+An operator: *
+An identifier: r
+An operator: *
+An identifier: r
+An operator: *
+A keyword: sin
+A separator: (
+An integer: 2 (2)
+An operator: *
+An identifier: pi
+An operator: /
+An identifier: n
+A separator: )
+A separator: ;
+A keyword: print
+A separator: (
+An identifier: area
+A separator: )
+A separator: ;
